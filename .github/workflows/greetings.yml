@@ -1,0 +1,19 @@
+name: Greetings Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Greetings
+        uses: actions/awesome-action@v1
+        with:
+          message: "Greetings! 🎉"
